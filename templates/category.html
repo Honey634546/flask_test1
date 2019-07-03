@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择签证类别</title>
+</head>
+<body>
+<h1>选择签证类别</h1>
+<form method="post">
+    {{ form.csrf_token }}
+    {{ form.num.label }}{{ form.num }}
+    {% for err in form.num.errors %}
+        {{ err }}
+    {% endfor %}
+    <br>
+    {{ form.category.label }}
+    {{ form.category }}
+    <br>
+    {{ form.submit }}
+
+</form>
+</body>
+</html>

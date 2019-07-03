@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取邮箱</title>
+</head>
+<body>
+<h1>填写你的电子邮件，方便我们联系您！</h1>
+<form method="post">
+        {{ form.csrf_token }}
+    {{ form.email.label }}
+    {{ form.email }}
+    {% for error in form.email.errors %}
+    {{ error }}
+    {% endfor %}
+
+    <br>
+    {{ form.submit }}
+</form>
+</body>
+</html>

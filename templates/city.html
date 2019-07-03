@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>city</title>
+</head>
+<body>
+<h1>
+请选择您打算提交申请的签证申请中心:
+</h1>
+<br>
+<form method="POST">
+    {{ form.csrf_token }}
+    {{ form.city.label }}
+    {{ form.city }}
+    {{ form.submit }}
+</form>
+
+</body>
+</html>

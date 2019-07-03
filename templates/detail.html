@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>护照信息</title>
+</head>
+<body>
+<p>
+    please input male or female in Gender
+</p>
+<form method="post">
+    {{ form.csrf_token }}
+    {{ form.Passport_Number.label }}{{ form.Passport_Number }}
+    <br>
+    {{ form.Gender.label }}{{ form.Gender }}
+    {% for error in form.Gender.errors %}
+        {{ error }}
+    {% endfor %}
+
+    <br>
+    {{ form.Name.label }}{{ form.Name }}
+    <br>
+    {{ form.Surname.label }}{{ form.Surname }}
+    <br>
+    {{ form.Area_Code.label }}{{ form.Area_Code }}
+    <br>
+    {{ form.Mobile_Number.label }}{{ form.Mobile_Number }}
+    <br>
+    {{ form.submit }}
+
+</form>
+</body>
+</html>
